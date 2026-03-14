@@ -1,0 +1,124 @@
+.site-footer {
+  background: var(--bg-footer);
+  color: #f5f7fa;
+  padding: var(--spacing-2xl) 0;
+  margin-top: var(--spacing-2xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.socials {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  font-size: 20px;
+  font-weight: 700;
+  color: #f5f7fa;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.socials a:hover {
+  background: var(--brand-primary);
+  transform: scale(1.15);
+  border-color: var(--brand-primary);
+}
+
+.ops {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a0aec0;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  text-align: right;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  font-size: 13px;
+}
+
+.legal a {
+  color: #a0aec0;
+  transition: color var(--transition-fast);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal a:hover {
+  color: var(--brand-primary);
+}
+
+.legal-line {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.legal-line a,
+.legal-line span {
+  display: inline;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #718096;
+  margin-top: var(--spacing-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .legal-line {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
